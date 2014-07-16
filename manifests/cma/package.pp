@@ -1,11 +1,11 @@
-# == Class: assimilation::package
+# == Class: assimilation::cma::package
 #
 # Full description of class assimilation is in the README.
 #
-class assimilation::package (
-  $ensure         = $assimilation::package_ensure,
+class assimilation::cma::package (
+  $ensure         = $assimilation::cma::package_ensure,
+  $package_name   = $assimilation::cma::package_name,
   $package_source = $assimilation::package_source,
-  $package_name   = $assimilation::package_name,
 ) {
   exec { 'download_assimilation_package':
     command => "/usr/bin/wget ${package_source}/${package_name}.deb",

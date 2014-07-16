@@ -9,7 +9,7 @@ class assimilation::config (
   $config_file = $assimilation::config_file,
 ) {
   $merged_options = merge($assimilation::defaults::default_options, $options)
-  $assignment_character = ' = '
+  $assignment_character = '='
 
   file { "${config_path}/${config_file}":
     ensure  => $ensure,

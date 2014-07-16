@@ -1,0 +1,4 @@
+# This file is managed by puppet class <%= @name %>
+<% @merged_options.sort.each do |option,value| %>
+<% if value %><%= option %><%=$assignment_character%><%= value %>
+<% end %><% end %>
